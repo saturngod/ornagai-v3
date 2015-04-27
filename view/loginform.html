@@ -1,0 +1,22 @@
+<div id="loginFrm" class='contentForm'>
+<section class="popupform">
+  <h2>Please Login</h2>
+  <div class='errmsg'>{{userCtr.errorMsg}}</div>
+
+  <form>
+
+    <input ng-model="userCtr.username" type="text" placeholder="Username" id="username" class='txtbox txttop'>
+    <input ng-model="userCtr.email" type="email" placeholder="Email" id="email" class='txtbox txtmiddle' ng-show="userCtr.showRegisterForm">
+    <input ng-model="userCtr.password" type="password" placeholder="Password" id="password" class='txtbox' ng-class="userCtr.showRegisterForm ? 'txtmiddle' : 'txtbottom'">
+    <input ng-model="userCtr.confirmpassword" type="password" id="confirmpassword"
+          placeholder="Confirm Password" class='txtbox txtbottom' ng-show="userCtr.showRegisterForm"
+          >
+    <input type="button" class='btn' ng-click="userCtr.login()" value="Login" id="loginBtn" ng-show="!userCtr.showRegisterForm">
+    <input type="button" class='btn' ng-click="userCtr.register()" value="Register" id="registerBtn" ng-show="userCtr.showRegisterForm">
+    <input type="button" class='btn' value="Cancel" ng-click="userCtr.hideForm()">
+    <br/>
+    <a href="#" ng-click="userCtr.showRegisterForm = true" ng-show="!userCtr.showRegisterForm">Register</a>
+    <a href="#" ng-click="userCtr.showRegisterForm = false" ng-show="userCtr.showRegisterForm">Back to Login</a>
+  </form>
+</section>
+</div>

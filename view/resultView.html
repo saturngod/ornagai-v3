@@ -1,0 +1,38 @@
+<div id="details">
+  <div class='message' ng-show="!resultCtrl.selectedData.Word">
+              <h2 id="title">Ornagi (beta version)</h2>
+              <p>Ornagai is a English to Myanmar , Myanmar To English Dictionary. Please, use <b>Zawgyi</b> font for Myanmar to English Dictionary</p>
+
+              <p>Current version is a beta version and you can report problem/bugs at <a href="http://discuss.ornagai.com/">Ornagai Feedback</a>.</p>
+
+              <div id="download">
+                <h3>Mac Dictionary</h3>
+                <div id="ios-app"><a href="http://cl.ly/XLSC/Ornagai.dictionary.zip"><img src="./images/mac.png"></a></div>
+
+                <h3>Mobile</h3>
+
+                <div id="ios-app"><a href="https://itunes.apple.com/us/app/ornagai-2/id595534444?mt=8"><img src="./images/apple.png"></a></div>
+                <div id="play-store"><a href="https://play.google.com/store/apps/details?id=com.comquas.ornagai"><img src="./images/playstore.png"></a></div>
+              </div>
+  </div>
+  <div ng-show="resultCtrl.selectedData.Word">
+            <div class='word'>{{resultCtrl.selectedData.Word}} <a href="" class='speak' ng-click="resultCtrl.tts(resultCtrl.selectedData)"><i class="icon-volume"></i></a></div>
+            <div class='state'>{{resultCtrl.selectedData.state}}</div>
+            <div class='def'>{{resultCtrl.selectedData.def}}</div>
+            <div class="status">{{resultCtrl.selectedData.status}}</div>
+            <div class="date">{{resultCtrl.selectedData.approve == 1 ? "Approved" : "In Review"}}</div>
+   </div>
+
+</div>
+
+    <div id="discussForm" ng-show="resultCtrl.selectedData.Word && resultCtrl.isLogin">
+      <!-- future todo -->
+        <comment-box postid="resultCtrl.selectedData.id" word="resultCtrl.selectedData.Word" login="resultCtrl.isLogin" username="resultCtrl.username" type="resultCtrl.selectedData.type"></comment-box>
+
+    </div>
+
+<!--
+    <div id="discussForm" ng-show="resultCtrl.selectedData.Word">
+      <textarea id="commentText"></textarea>
+        <a class="btn" href="#">Submit</a>
+    </div> -->

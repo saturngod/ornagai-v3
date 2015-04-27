@@ -1,0 +1,17 @@
+<div id="addFrm" class='contentForm'>
+
+  <section class='popupform'>
+  <h2>Add new word</h2>
+
+  <form>
+  <div class='errmsg'>{{addCtr.errorMsg}}</div>
+
+  <input type="text" ng-model="addCtr.word" placeholder="English Word" id="enword" class='txtbox txttop'>
+  <input type="text" ng-model="addCtr.state" placeholder="State (n,v,adj,adv)" id="enstate" class='txtbox txtmiddle'>
+  <input type="text" ng-model="addCtr.def" placeholder="Definition" id="enDef" class='txtbox txtbottom'>
+  <input type="button" class='btn' id="addnewword" value="Add" ng-click="addCtr.insert()">
+  <input type="button" class='btn' value="Cancel" ng-click="addCtr.hide()">
+
+  </form>
+</section>
+</div>

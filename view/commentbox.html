@@ -1,0 +1,31 @@
+<div>
+<h2 class="suggestion">Comments</h2>
+  <div id="comments">
+    <section class='comment-detail'  ng-repeat="comment in commentCtr.comments">
+      <div class='user'>
+        <img ng-src="http://www.gravatar.com/avatar/{{comment.avatar}}" class='avatar'/>
+      </div>
+      <div class="comment">
+              <b>{{comment.username}}</b><br/>
+              <div class='comment-datetime'>{{comment.date_time}}</div>
+        <div class="comment-content" ng-bind-html="commentCtr.renderHTML(comment.comment)">
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+  <div id="commentbox">
+    <div ng-show="commentCtr.loading" id="comment-loading">Loading....</div>
+    <h3>Enter your Comment ({{commentCtr.username}})</h3>
+
+    <div class="comment-content" ng-bind-html="commentCtr.renderHTML(commentCtr.newcomment)"></div>
+
+    <div>
+      <textarea ng-model="commentCtr.newcomment" id="comment-text"></textarea>
+    </div>
+
+    <a href="" ng-click="commentCtr.addComment();" id="comment-submit" class="btn">Submit</a>
+
+  </div>
+</div>

@@ -1,0 +1,508 @@
+body {
+-webkit-font-smoothing: antialiased;
+font-smoothing: antialiased;
+background: #F8FAFB;
+color: #4b525b;
+font: 13px/1.7em "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+h1,h2,h3,h4,h5,h6,p,div
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+body a ,body a:visited{
+  color: #707885;
+  text-decoration:none;
+
+}
+
+body a:hover {
+  color: #111;
+}
+
+a img{
+  border:none;
+}
+
+#left {
+    width: 320px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+}
+
+#results {
+    width: 320px;
+    overflow: auto;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    width: 320px;
+    background: #FFF;
+}
+
+#results section {
+
+    padding-left: 10px;
+    padding-right:5px;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: inset 0 -1px 0 #EEE;
+    overflow:hidden;
+}
+
+.word {
+    font-weight: bold;
+    font-size: 15px;
+	font-family:'Zawgyi-One';
+}
+.state {
+    font-size: 15px;
+}
+
+.def {
+    font-family: 'Zawgyi-One';
+    font-size: 14px;
+}
+
+#right #details {
+box-shadow: inset 0 -1px 0 #EEE;
+padding-bottom: 10px;
+padding-top: 8px;
+}
+
+#left footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+
+    box-shadow: inset 0 1px 0 #CCC;
+    background: #FFF;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), #F0F2F6 90%, #E5E8EE);
+}
+
+#left header {
+    background: #FFF;
+    width: 100%;
+    box-shadow: inset 0 -1px 0 #CCC;
+background-image: linear-gradient(rgba(255, 255, 255, 0), #F0F2F6 90%, #E5E8EE);
+}
+
+#topheader {
+    padding: 5px;
+}
+
+#topheader .logo {
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#topheader #query {
+    border : none;
+    height: 28px;
+    background: #FFF;
+    outline: none;
+    padding:2px 5px;
+    width: 225px;
+    padding-left: 23px;
+    background-image: linear-gradient(#F0F2F6,rgba(255, 255, 255, 0)  100%, #E5E8EE);
+    font-family: Zawgyi-One;
+    font-size: 15px;
+    border: 1px solid #CCC;
+    border-radius: 15px;
+}
+
+#search-icon {
+    background: url("../images/search-icon.png") no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 21px;
+    left: 65px;
+    z-index: 100;
+}
+
+#searchBtn {
+
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    z-index: 9999;
+
+}
+
+#right {
+    position: absolute;
+    left: 320px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-left: 1px solid #CCC;
+}
+
+
+#bottom {
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+#details {
+    padding-left: 20px;
+    background: #FFF;
+}
+
+#discuss {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.btn {
+display: inline-block;
+padding: 4px 9px;
+line-height: 1.5;
+
+text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+
+background-color: #FFF;
+background-image: linear-gradient(rgba(255, 255, 255, 0), #F0F2F6 90%, #E5E8EE);
+box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.10), inset 0px 1px 0px 0px #FFFFFF;
+
+border-radius: 4px;
+border: 1px solid rgba(152, 164, 184, 0.8);
+border-bottom-color: lighten(#98A4B8, 10%);
+border-top-color: rgba(152, 164, 184, 0.6);
+cursor: pointer;
+outline: none;
+
+color: #707885;
+line-height: 24px;
+text-shadow: 0 1px 0 #FFF;
+user-select: none;
+text-decoration: none;
+font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight: bold;
+
+vertical-align: middle;
+
+}
+
+.add {
+    float: right;
+}
+
+#right {
+    background: #FFF;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+
+
+}
+
+.user {
+    display: inline-block;
+    text-align: center;
+}
+
+.comment {
+    display: inline-block;
+    font-family: Zawgyi-One;
+    padding-left:5px;
+}
+
+#discussForm {
+    background: #F0F2F6;
+}
+#commentText {
+    width: 98%;
+    height: 80px;
+    border:1px solid #E5E8EE;
+    border-radius: 5px;
+    outline: none;
+    font-family: Zawgyi-One;
+}
+
+#discussForm {
+    padding-left: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+
+.status , .date  {
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.suggestion {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+#results section:hover {
+	background:#EEE;
+}
+
+
+.popupform{
+
+  margin: 10% auto;
+  z-index: 99999;
+  position: relative;
+  padding:5px;
+  width:200px;
+  border:1px solid #CCC;
+  background: #FFF;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #F0F2F6 90%, #E5E8EE);
+  border-radius:5px;
+
+}
+
+.txtbox {
+  display: block;
+  border: none;
+  height: 28px;
+  background: #FFF;
+  outline: none;
+  padding: 2px 5px;
+  width: 182px;
+  padding-left: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border:1px solid #ccc;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.popupform h2{
+  font-size: 18px;
+  margin-bottom:5px;
+  padding-left:2px;
+}
+
+form .txttop {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+form .txtmiddle {
+  border-radius: 0;
+  border-top: none;
+}
+
+form .txtbottom {
+  border-top:none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.popupform #enDef {
+  font-family: "Zawgyi-One";
+}
+
+.popupform .btn {
+  margin-top:10px;
+  margin-bottom:5px;
+}
+
+
+#left .tt-dropdown-menu {
+  border: 1px solid #CCC;
+  padding:2px 5px;
+  width: 225px;
+  margin-top: 5px;
+  background: #FFF;
+}
+
+#usermenu ,#usermenu li{
+  list-style:none;
+  padding:0px;
+  margin:0px;
+  text-align:left;
+}
+
+#usermenu li {
+  padding:10px 5px;
+}
+
+#usermenu {
+  background-color: white;
+  border: 1px solid #9eaabc;
+  border-radius: 5px;
+  position: absolute;
+  top: -73px;
+  width: 140px;
+  margin-left: 10px;
+  opacity:0;
+  transform: scale(0.35) translate3d(0px, 0px, 0px);
+  -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: all 0.3s;
+}
+
+#usermenu li a {
+  text-decoration : none;
+  color: #707885;
+}
+
+#usermenu:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 7px solid #78A;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  bottom: -7px;
+  left: 16px;
+
+}
+
+#usermenu:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: -6px;
+  left: 17px;
+  height: 0;
+  width: 0;
+  border-top: 6px solid #fff;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+.tt-suggestion {
+    padding: 3px 20px;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    font-family: "Zawgyi-One";
+}
+
+.tt-suggestion:hover , .tt-cursor {
+  background: #EEE;
+}
+
+.tt-suggestion.tt-is-under-cursor { /* UPDATE: newer versions use .tt-suggestion.tt-cursor */
+    color: #fff;
+    background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+    margin: 0;
+}
+
+
+#results .loading {
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#title {
+  padding-bottom:10px;
+}
+
+#download {
+  margin-top:20px;
+}
+
+
+.popupform a {
+  text-decoration:none;
+  color:#707885;
+}
+
+#commentbox {
+  padding-left: 20px;
+  padding-right:20px;
+  padding-top:20px;
+}
+
+#comment-text {
+  margin-top:5px;
+  width:90%;
+  height:100px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  outline:none;
+  padding:5px;
+  color:#4b525b;
+  font-family:"Zawgyi-One";
+  font-size:14px;
+}
+
+#comment-text:focus {
+  border:1px solid #AAA;
+}
+
+.comment-detail {
+  width:90%;
+  margin-left: 20px;
+  padding-top:10px;
+  padding-bottom:10px;
+  border-bottom:1px dotted #CCC;
+}
+
+
+.form-background {
+  background: black;
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+}
+
+.contentForm {
+  display:none;
+  width:100%;
+  height:100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(10,10,10,0.5);
+  z-index: 100;
+}
+
+.showSweetAlert {
+    line-height: 40px;
+}
+
+.comment-content {
+  font-family:'Zawgyi-One';
+}
+
+.comment-datetime {
+
+  font-size:10px;
+  font-color:#CCC;
+}

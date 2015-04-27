@@ -1,0 +1,6 @@
+{
+    "require": {
+        "slim/slim": "2.*",
+        "mailgun/mailgun-php": "~1.7.1"
+    }
+}
