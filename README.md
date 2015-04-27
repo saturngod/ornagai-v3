@@ -41,7 +41,7 @@ You need to install composer first.
 php composer.phar install
 ```
 
-## Usages Library
+## Libraries
 
 ### Front-End
 
