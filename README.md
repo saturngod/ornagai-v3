@@ -25,7 +25,7 @@ $ openssl rsa -in key.pem -noout -modulus
 
 Copy the Modulus. Example `9CAF2D1CBB4F823C46457DA5EAE24F3422BE0E2B3E81E3CF04F5C00B16487DDF96BD901F39577F7F3650882A9292BBB0272D872A28E867FA0A89A06DEE4B73A`
 
-Search , `rsa.setPublic` and paste the code in there.
+Search , `rsa.setPublic` and paste the code in `js/app.js`.
 
 Example
 
