@@ -59,3 +59,7 @@ php composer.phar install
 - [MySQL](https://www.mysql.com)
 - [Composer](https://getcomposer.org)
 - [phpseclib](https://github.com/phpseclib/phpseclib)
+
+## License 
+
+MIT
